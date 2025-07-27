@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Comapny page</title>
+    <style>
+        *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    padding: 0 16px;
+    background-color: #f8f9fa;
+    color: #222;
+}
+
+.logo{
+    font-weight: bold;
+    font-family: 20px;
+}
+
+#menu-toggle{
+    display: none;
+}
+
+.hamberger{
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.navbar{
+    max-width: 1280px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0 auto;
+    padding: 20px 0;
+    flex-wrap: wrap;
+}
+
+.nav-menu{
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+.nav-menu a{
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+
+.auth-btn{
+    display: flex;
+    gap: 20px;
+}
+
+.auth-btn .login{
+    text-decoration: none;
+    color: #333;
+}
+
+.auth-btn .signup{
+    text-decoration: none;
+    color: #333;
+    background-color: #7f56d9;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 4px;
+}
+
+/*hero*/
+
+.hero{
+    text-align: center;
+    padding: 60px 20px;
+    border-top: 2px solid #e0e0e0;
+}
+
+.s-heading{
+    color: #7f56d9;
+    margin-bottom: 8px;
+}
+
+.hero h2{
+    font-size: 2.5rem;
+margin-bottom: 10px;
+}
+
+.hero p{
+margin-bottom: 10px;
+}
+
+/*metrix/*/
+
+.metrics{
+    max-width: 1280px;
+    display: flex;
+    margin: 40px auto;
+    gap: 50px;
+    flex-wrap: wrap;
+    padding: 30px 20px;
+    border-radius: 10px;
+}
+
+.m-img img{
+    width: 500px;
+    height: 300px;
+}
+
+.m-text{
+    flex: 1;
+}
+
+.m-conent{
+    display: none;
+}
+
+.m-text .s-purple{
+    color: #7f56d9;
+}
+
+.m-text h2{
+    font-size: 1.75rem;
+    margin: 12px 0 24px;
+}
+
+.stats{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 20px;
+}
+
+.stats strong{
+    font-size: 1.5rem;
+    color: #7f56d9;
+}
+
+/*social*/
+
+.social{
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.logo-social{
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+
+.logo-social{
+    font-weight: bold;
+    color: #333;
+}
+
+
+@media (max-width:768px){
+    .navbar{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .hamberger{
+        display: block;
+        margin-left: auto;
+    }
+
+    .nav-menu,
+    .auth-btn{
+        width: 100%;
+        flex-direction: column;
+        display: none;
+        gap: 16px;
+        margin-top: 10px;
+    }
+
+    #menu-toggle:checked + .hamberger + .nav-menu,
+    #menu-toggle:checked + .hamberger + .nav-menu + .auth-btn{
+        display: flex;
+    }
+
+    .metrics{
+        flex-direction: column-reverse;
+    }
+
+  
+    .m-img img{
+    max-width: 100%;
+    height: auto;
+    }
+
+    .m-conent{
+    display: block;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+    .stats{
+        grid-template-columns: 1fr;
+    }
+
+    .m-text h2{
+        font-size: 1.25rem;
+    }
+
+    .logo-social{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+
+}
+    </style>
+</head>
+<body>
+    <!--Header-->
+    <header class="navbar">
+        <div class="logo">
+            <h2>Untitled UI</h2>
+        </div>
+
+        <!--hamberger-->
+
+        <input type="checkbox"  id="menu-toggle">
+        <label for="menu-toggle" class="hamberger">&#9776;</label>
+
+        <!--navmenu-->
+
+        <ul class="nav-menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">Resources</a></li>
+            <li><a href="#">Pricing</a></li>
+        </ul>
+
+         <!--auth-btn-->
+         <div class="auth-btn">
+            <a href="#" class="login">login</a>
+            <a href="#" class="signup">signup</a>
+         </div>
+    </header>
+
+     <!--hero-->
+
+     <section class="hero">
+        <p class="s-heading">About Us</p>
+        <h2>About the Comapny</h2>
+        <p>leran about the company and their behind it.</p>
+     </section>
+
+     <!--metrics-->
+     <section class="metrics">
+        <div class="m-img">
+            <img src="/office.jpg" alt="" srcset="">
+        </div>
+
+        <div class="m-text">
+            <p class="s-purple">we've helped hundred of comapnies</p>
+            <h2>We're only just getting started on our journey</h2>
+            <div class="m-conent">
+                Everything you need to build mordern Ui and great products.We've done all the heavy lifiting so you dont have to-the perfect starting point of your project
+            </div>
+            <div class="stats">
+                <div><Strong>400+</Strong><p>Projects completed</p></div>
+                <div><Strong>600%</Strong><p>Return on investment</p></div>
+                <div><Strong>10k</Strong><p>Global downloads</p></div>
+                <div><Strong>200+</Strong><p>5-star reviews</p></div>
+            </div>
+        </div>
+     </section>
+
+     <!--social-->
+
+     <section class="social">
+        <p>From startups to hundred largest comapnies</p>
+        <div class="logo-social">
+            <span>Layers</span>
+            <span>Sisphus</span>
+            <span>Circooles</span>
+            <span>Catalog</span>
+            <span>Quotient</span>
+            <span>hourglass</span>
+        </div>
+     </section>
+</body>
+</html>
